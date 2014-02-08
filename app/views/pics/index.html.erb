@@ -1,0 +1,15 @@
+<div class="span6 offset3 helloBox">
+	<h2>
+		<!-- this is like var dump -->
+		<% @pics.each do |pic|%>
+			Hour: <%= pic.hour %>
+			<br/>
+			Emotion: <%= pic.emotion %>
+			<br/>
+			Learned: <%= pic.learned %>
+			<br/>
+			<br/>
+			
+		<% end %>
+	</h2>
+</div>
