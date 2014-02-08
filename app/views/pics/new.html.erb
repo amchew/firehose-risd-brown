@@ -1,15 +1,18 @@
-<div class="span4 text-centre helloBox">
+<div class="span6 offset3 text-center helloBox">
 	
-	<h2>You can have a new post!
+	<h1 class="custom-font">
+	Type a new post </h1>
+	<br/>
 
 	<%= simple_form_for @pic do |f|%>
-		<%= f.input :hour %>
-		<%= f.input :emotion, :as => :text %> 
-		<!-- this is how you override it :as => :text -->
-		<%= f.input :learned %>
-
-		<%= f.submit 'Save' %>
+		<%= f.input :hour, label: 'What time?', placeholder: '1, 2, 3 etc' %>
+		<%= f.input :emotion, label: 'How did you feel?', placeholder: 'Stoked, Confused, Excited, Hungry, Sleepy, Happy', :as => :text %> 
+		<!-- this is how you override it to make more texts :as => :text -->
+		<!-- this is how you make placeholder -> placeholder: 'Stoked, Confused, Excited, Hungry, Sleepy, Happy'-->
+		<%= f.input :learned, label: 'What did you learn?', placeholder: 'HTML, CSS, Rails, Ruby, Github' %>
+		<br/>
+		<%= f.submit 'Save', :class => 'btn btn-warning btn-large' %>
 	<% end %>
-	</h2>
+
 
 </div>
