@@ -1,0 +1,15 @@
+<div class="span4 text-centre helloBox">
+	
+	<h2>You can have a new post!
+
+	<%= simple_form_for @pic do |f|%>
+		<%= f.input :hour %>
+		<%= f.input :emotion, :as => :text %> 
+		<!-- this is how you override it :as => :text -->
+		<%= f.input :learned %>
+
+		<%= f.submit 'Save' %>
+	<% end %>
+	</h2>
+
+</div>
