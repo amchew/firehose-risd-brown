@@ -6,6 +6,12 @@
 
 	<%= simple_form_for @pic do |f|%>
 		<%= f.input :hour, label: 'What time?', placeholder: '1, 2, 3 etc' %>
+		
+		<div class="label">Selfie</div>
+		<div class="move-button" >
+		<%= f.input :image, :label => false %>
+		</div>
+		
 		<%= f.input :emotion, label: 'How did you feel?', placeholder: 'Stoked, Confused, Excited, Hungry, Sleepy, Happy', :as => :text %> 
 		<!-- this is how you override it to make more texts :as => :text -->
 		<!-- this is how you make placeholder -> placeholder: 'Stoked, Confused, Excited, Hungry, Sleepy, Happy'-->
